@@ -5,10 +5,7 @@
 #include "applejuice.h"
 WebServer server(80);
 int num_networks;
-
-// Move the function declaration to the top
 String getEncryptionType(wifi_auth_mode_t encryptionType);
-
 void redirect_root() {
   server.sendHeader("Location", "/");
   server.send(301);
@@ -189,6 +186,21 @@ void handle_root() {
     html += "<option value=\"7\">7: Class 3 frame received from nonassociated STA</option>";
     html += "<option value=\"8\">8: Disassociated because sending STA is leaving BSS</option>";
     html += "<option value=\"9\">9: STA requesting association is not authenticated</option>";
+    html += "<option value=\"10\">10: Disassociated - Power Capability unacceptable</option>";
+    html += "<option value=\"11\">11: Disassociated - Supported Channels unacceptable</option>";
+    html += "<option value=\"12\">12: Disassociated due to BSS Transition Management</option>";
+    html += "<option value=\"13\">13: Invalid element</option>";
+    html += "<option value=\"14\">14: Message integrity code (MIC) failure</option>";
+    html += "<option value=\"15\">15: 4-Way Handshake timeout</option>";
+    html += "<option value=\"16\">16: Group Key Handshake timeout</option>";
+    html += "<option value=\"17\">17: Element in 4-Way Handshake different</option>";
+    html += "<option value=\"18\">18: Invalid group cipher</option>";
+    html += "<option value=\"19\">19: Invalid pairwise cipher</option>";
+    html += "<option value=\"20\">20: Invalid AKMP</option>";
+    html += "<option value=\"21\">21: Unsupported RSNE version</option>";
+    html += "<option value=\"22\">22: Invalid RSNE capabilities</option>";
+    html += "<option value=\"23\">23: IEEE 802.1X authentication failed</option>";
+    html += "<option value=\"24\">24: Cipher suite rejected (security policy)</option>";
     html += "</select></div>";
     html += "<button type=\"submit\" class=\"btn btn-danger\">Launch Attack</button>";
     html += "</form></div></div>";
@@ -210,6 +222,21 @@ void handle_root() {
     html += "<option value=\"7\">7: Class 3 frame received from nonassociated STA</option>";
     html += "<option value=\"8\">8: Disassociated because sending STA is leaving BSS</option>";
     html += "<option value=\"9\">9: STA requesting association is not authenticated</option>";
+    html += "<option value=\"10\">10: Disassociated - Power Capability unacceptable</option>";
+    html += "<option value=\"11\">11: Disassociated - Supported Channels unacceptable</option>";
+    html += "<option value=\"12\">12: Disassociated due to BSS Transition Management</option>";
+    html += "<option value=\"13\">13: Invalid element</option>";
+    html += "<option value=\"14\">14: Message integrity code (MIC) failure</option>";
+    html += "<option value=\"15\">15: 4-Way Handshake timeout</option>";
+    html += "<option value=\"16\">16: Group Key Handshake timeout</option>";
+    html += "<option value=\"17\">17: Element in 4-Way Handshake different</option>";
+    html += "<option value=\"18\">18: Invalid group cipher</option>";
+    html += "<option value=\"19\">19: Invalid pairwise cipher</option>";
+    html += "<option value=\"20\">20: Invalid AKMP</option>";
+    html += "<option value=\"21\">21: Unsupported RSNE version</option>";
+    html += "<option value=\"22\">22: Invalid RSNE capabilities</option>";
+    html += "<option value=\"23\">23: IEEE 802.1X authentication failed</option>";
+    html += "<option value=\"24\">24: Cipher suite rejected (security policy)</option>";
     html += "</select></div>";
     html += "<button type=\"submit\" class=\"btn btn-danger\">Deauth All Networks</button>";
     html += "</form></div></div>";
