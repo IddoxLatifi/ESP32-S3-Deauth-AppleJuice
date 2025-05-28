@@ -21,8 +21,6 @@
 
 - **WiFi Deauthentication Attacks** – Disconnect devices from WiFi networks  
 - **Access Point Scanning** – Discover nearby WiFi networks  
-- **Station Scanning** – Identify connected devices  
-- **Beacon Flooding** – Create fake WiFi networks  
 - **Apple Juice Attack** – iOS device targeting capabilities  
 - **Packet Monitor** – Real-time WiFi packet analysis  
 
